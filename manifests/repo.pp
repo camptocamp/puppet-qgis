@@ -22,21 +22,8 @@ class qgis::repo {
       ensure => present,
     }
 
-    apt::preferences { [
-      "libqgis-dev",
-      "libqgis1",
-      "python-qgis-common",
-      "python-qgis",
-      "qgis-api-doc",
-      "qgis-common",
-      "qgis-mapserver",
-      "qgis-plugin-grass-common",
-      "qgis-plugin-grass",
-      "qgis-providers-common",
-      "qgis-providers",
-      "qgis-sqlanywhere*",
-      "qgis",
-      ]:
+    apt::preferences {'qgis':
+      package => 'libqgis-dev libqgis1 python-qgis-common python-qgis qgis-api-doc qgis-common qgis-mapserver qgis-plugin-grass-common qgis-plugin-grass qgis-providers-common qgis-providers qgis-sqlanywhere* qgis',
       ensure   => present,
       pin      => "release o=Quantum GIS project",
       priority => 1100,
