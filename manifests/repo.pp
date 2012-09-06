@@ -18,8 +18,9 @@ class qgis::repo {
       content => "deb http://qgis.org/debian ${lsbdistcodename} main",
     }
 
-    apt::key { "5CA44993": # TODO: expires 2012-08-17
-      ensure => present,
+    apt::key {'997D3880':
+      keyserver => 'keyserver.ubuntu.com',
+      ensure    => present,
     }
 
     apt::preferences {'qgis':
