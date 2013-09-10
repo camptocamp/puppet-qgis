@@ -11,22 +11,22 @@ Only compatible with debian/ubuntu.
 */
 class qgis::repo {
 
-  if $lsbdistid =~ /Debian|Ubuntu/ {
+  if $::osfamily == 'Debian' {
 
-    apt::sources_list { "qgis.org":
+    apt::sources_list { 'qgis.org':
       ensure  => present,
-      content => "deb http://qgis.org/debian ${lsbdistcodename} main",
+      content => "deb http://qgis.org/debian ${::lsbdistcodename} main",
     }
 
     apt::key {'997D3880':
-      keyserver => 'keyserver.ubuntu.com',
       ensure    => present,
+      keyserver => 'keyserver.ubuntu.com',
     }
 
     apt::preferences {'qgis':
-      package => 'libqgis-dev libqgis1 python-qgis-common python-qgis qgis-api-doc qgis-common qgis-mapserver qgis-plugin-grass-common qgis-plugin-grass qgis-providers-common qgis-providers qgis-sqlanywhere* qgis',
       ensure   => present,
-      pin      => "release o=Quantum GIS project",
+      package  => 'libqgis-dev libqgis1 python-qgis-common python-qgis qgis-api-doc qgis-common qgis-mapserver qgis-plugin-grass-common qgis-plugin-grass qgis-providers-common qgis-providers qgis-sqlanywhere* qgis',
+      pin      => 'release o=Quantum GIS project',
       priority => 1100,
     }
   }
