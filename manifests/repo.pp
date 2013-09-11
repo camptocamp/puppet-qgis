@@ -18,9 +18,8 @@ class qgis::repo {
       content => "deb http://qgis.org/debian ${::lsbdistcodename} main",
     }
 
-    apt::key {'997D3880':
+    apt::key {'47765B75':
       ensure    => present,
-      keyserver => 'keyserver.ubuntu.com',
     }
 
     apt::preferences {'qgis':
