@@ -18,7 +18,7 @@ class qgis::mapserver::apache {
 
   package { "libapache2-mod-fastcgi": ensure => present }
 
-  apache::module { "fastcgi":
+  apache_c2c::module { "fastcgi":
     ensure  => present,
     require => Package["libapache2-mod-fastcgi"],
   }
