@@ -18,11 +18,9 @@ class qgis::repo {
       location    => 'http://qgis.org/debian',
       release     => $::lsbdistcodename,
       repos       => 'main',
-      include_src => false,
-    }
-
-    apt::key {'47765B75':
-      ensure    => present,
+      key         => '47765B75',
+      key_server  => 'keyserver.ubuntu.com',
+      include_src => true,
     }
 
     $qgis_packages = [
