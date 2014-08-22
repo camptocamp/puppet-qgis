@@ -41,7 +41,7 @@ class qgis::repo {
 
     apt::pin {'qgis-org':
       ensure     => present,
-      packages   => inline_template('<%= qgis_packages.join(" ") %>'),
+      packages   => inline_template('<%= @qgis_packages.join(" ") %>'),
       originator => 'Quantum GIS project',
       priority   => 1100,
     }
