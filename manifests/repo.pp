@@ -1,14 +1,11 @@
-/*
-
-== Class: qgis::repo
-
-Configure apt-get to fetch all qgis packages from qgis.org.
-You can still prefer install your distribution packages by setting
-another apt::pin resource with a higher priority.
-
-Only compatible with debian/ubuntu.
-
-*/
+# == Class: qgis::repo
+#
+# Configure apt-get to fetch all qgis packages from qgis.org.
+# You can still prefer install your distribution packages by setting
+# another apt::pin resource with a higher priority.
+#
+# Only compatible with debian/ubuntu.
+#
 class qgis::repo {
 
   if $::osfamily == 'Debian' {
