@@ -1,0 +1,38 @@
+{
+  "name": "camptocamp-qgis",
+  "version": "1.0.0",
+  "author": "Camptocamp",
+  "summary": "Puppet Qgis module",
+  "license": "Apache 2.0",
+  "source": "https://github.com/camptocamp/puppet-qgis",
+  "project_page": "https://github.com/camptocamp/puppet-qgis",
+  "issues_url": "https://github.com/camptocamp/puppet-qgis/issues",
+  "dependencies": [
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04"
+      ]
+    }
+  ],
+  "puppet_version": [
+    "3.7"
+  ]
+}
