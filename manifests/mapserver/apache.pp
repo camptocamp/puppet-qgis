@@ -10,8 +10,8 @@
 #
 class qgis::mapserver::apache {
 
-  include qgis::mapserver
-  include apache
+  include ::qgis::mapserver
+  include ::apache
 
   package { 'libapache2-mod-fastcgi': ensure => present }
 

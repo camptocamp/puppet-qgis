@@ -4,7 +4,7 @@
 #
 class qgis::mapserver {
 
-  include qgis::repo
+  include ::qgis::repo
 
   package { 'qgis-mapserver': ensure => present }
 

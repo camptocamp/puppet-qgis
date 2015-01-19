@@ -4,7 +4,7 @@
 #
 class qgis::desktop {
 
-  include qgis::repo
+  include ::qgis::repo
 
   package { 'qgis': ensure => present }
 
