@@ -15,8 +15,8 @@ class qgis::repo {
       location    => 'http://qgis.org/debian',
       release     => $::lsbdistcodename,
       repos       => 'main',
-      key         => '47765B75',
-      key_server  => 'keyserver.ubuntu.com',
+      key         => '073D307A618E5811',
+      key_source  => 'http://qgis.org/downloads/qgis-2016.gpg.key',
       include_src => true,
     }
 
