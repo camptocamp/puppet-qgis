@@ -15,7 +15,7 @@ class qgis::repo {
       location    => 'http://qgis.org/debian',
       release     => $::lsbdistcodename,
       repos       => 'main',
-      key         => '47765B75',
+      key         => 'CAEB3DC3BDF7FB45',
       key_server  => 'keyserver.ubuntu.com',
       include_src => true,
     }
